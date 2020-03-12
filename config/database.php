@@ -90,6 +90,12 @@ return [
             'prefix' => '',
             'prefix_indexes' => true,
         ],
+        'sqlite_testing' => [
+            'driver'    => 'sqlite',
+            'url' => env('DATABASE_URL'),
+            'database'  => storage_path() . '/testing.sqlite',
+            'prefix'    => '',
+        ],
 
     ],
 

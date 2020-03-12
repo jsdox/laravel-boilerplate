@@ -3,11 +3,9 @@
 namespace Tests\Feature;
 
 use Illuminate\Foundation\Testing\RefreshDatabase;
-use Illuminate\Foundation\Testing\WithoutMiddleware;
 
 use Illuminate\Foundation\Testing\WithFaker;
 use Tests\TestCase;
-use App\Models\User;
 
 class UserTest extends TestCase
 {
@@ -25,6 +23,7 @@ class UserTest extends TestCase
     
     public function testCreate()
     {
+        $this->withoutExceptionHandling();
         $email = $this->faker->email();
         $attributes = [
             'name' =>  $this->faker->name(),
