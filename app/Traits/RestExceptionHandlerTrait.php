@@ -3,6 +3,7 @@
 namespace App\Traits;
 
 use Exception;
+use Throwable;
 use Illuminate\Validation\ValidationException;
 use Symfony\Component\HttpKernel\Exception\MethodNotAllowedHttpException;
 use Symfony\Component\HttpKernel\Exception\NotFoundHttpException;
@@ -10,7 +11,7 @@ use Symfony\Component\HttpKernel\Exception\NotFoundHttpException;
 trait RestExceptionHandlerTrait
 {
     protected $exception;
-    protected function getJsonResponseForException(Exception $exception)
+    protected function getJsonResponseForException(Throwable $exception)
     {
         $this->exception = $exception;
         switch(true)
