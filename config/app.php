@@ -166,6 +166,7 @@ return [
          * Package Service Providers...
          */
         App\Repositories\BackendServiceProvider::class,
+        Rollbar\Laravel\RollbarServiceProvider::class,
 
         /*
          * Application Service Providers...
