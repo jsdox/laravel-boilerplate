@@ -25,4 +25,8 @@ Route::group(['prefix' => config('constants.API_PREFIX'), 'middleware' => ['Chec
             return 'User testing';
         });
     });
+     Route::get('/pubtest', function()
+    {
+       return 'pubtest';
+    });
 });
